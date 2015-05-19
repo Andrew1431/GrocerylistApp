@@ -4,13 +4,8 @@
     </div>
     <div class="list-group">
         <a data-ng-repeat="grocerylist in grocerylists" data-ng-href="#!/grocerylists/{{grocerylist._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="grocerylist.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="grocerylist.user.displayName"></span>
-			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="grocerylist.name"></h4>
+            <p class="list-group-item-text">Quantity: {{grocerylist.quantity}}</p>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!grocerylists.$resolved || grocerylists.length">
