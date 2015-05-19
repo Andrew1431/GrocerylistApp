@@ -15,7 +15,7 @@ angular.module('grocerylists').controller('GrocerylistsController', ['$scope', '
 
 			// Redirect after save
 			grocerylist.$save(function(response) {
-				$location.path('grocerylists/' + response._id);
+				$location.path('grocerylists');
 
 				// Clear form fields
 				$scope.name = '';
