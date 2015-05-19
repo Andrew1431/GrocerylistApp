@@ -1,0 +1,19 @@
+<section data-ng-controller="GrocerylistsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Grocerylists</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="grocerylist in grocerylists" data-ng-href="#!/grocerylists/{{grocerylist._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="grocerylist.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="grocerylist.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="grocerylist.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!grocerylists.$resolved || grocerylists.length">
+    	No Grocerylists yet, why don't you <a href="/#!/grocerylists/create">create one</a>?
+    </div>
+</section>
