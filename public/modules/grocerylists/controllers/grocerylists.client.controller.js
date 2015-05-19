@@ -9,7 +9,8 @@ angular.module('grocerylists').controller('GrocerylistsController', ['$scope', '
 		$scope.create = function() {
 			// Create new Grocerylist object
 			var grocerylist = new Grocerylists ({
-				name: this.name
+				name: this.name,
+                quantity: this.quantity
 			});
 
 			// Redirect after save
