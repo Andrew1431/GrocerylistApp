@@ -13,9 +13,13 @@ var GrocerylistSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Grocerylist name',
+		required: 'Please enter a name',
 		trim: true
 	},
+    quantity: {
+        type: Number,
+        required: 'Please enter a quantity.'
+    },
 	created: {
 		type: Date,
 		default: Date.now
