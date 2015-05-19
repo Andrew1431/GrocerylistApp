@@ -10,12 +10,7 @@
 			<i class="glyphicon glyphicon-trash"></i>
 		</a>
 	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="grocerylist.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="grocerylist.user.displayName"></span>
-		</em>
-	</small>
+	<div class="row">
+        <h4>Quantity: {{grocerylist.quantity}}</h4>
+    </div>
 </section>

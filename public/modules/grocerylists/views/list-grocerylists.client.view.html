@@ -4,12 +4,12 @@
         <a ng-href="/#!/grocerylists/create"><button class="btn btn-success" data-ng-href="/#!/grocerylists/create">Add <span class="glyphicon glyphicon-plus"></span></button></a>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="grocerylist in grocerylists" data-ng-href="#!/grocerylists/{{grocerylist._id}}" class="list-group-item">
+        <a data-ng-repeat="grocerylist in grocerylists" data-ng-href="#!/grocerylists/{{grocerylist._id}}" class="list-group-item" data-ng-show="((authentication.user) && (authentication.user._id == grocerylist.user._id))">
 			<h4 class="list-group-item-heading" data-ng-bind="grocerylist.name"></h4>
             <p class="list-group-item-text">Quantity: {{grocerylist.quantity}}</p>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!grocerylists.$resolved || grocerylists.length">
-    	No Grocerylists yet, why don't you <a href="/#!/grocerylists/create">create one</a>?
+    	No grocery list yet, why don't you <a href="/#!/grocerylists/create">create one</a>?
     </div>
 </section>
