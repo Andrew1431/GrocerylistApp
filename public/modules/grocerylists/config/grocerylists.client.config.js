@@ -4,8 +4,8 @@
 angular.module('grocerylists').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Grocerylists', 'grocerylists', 'dropdown', '/grocerylists(/create)?');
-		Menus.addSubMenuItem('topbar', 'grocerylists', 'List Grocerylists', 'grocerylists');
-		Menus.addSubMenuItem('topbar', 'grocerylists', 'New Grocerylist', 'grocerylists/create');
+		Menus.addMenuItem('topbar', 'Groceries', 'grocerylists', 'dropdown', '/grocerylists(/create)?');
+		Menus.addSubMenuItem('topbar', 'grocerylists', 'List Groceries', 'grocerylists');
+		Menus.addSubMenuItem('topbar', 'grocerylists', 'Add Item', 'grocerylists/create');
 	}
 ]);
